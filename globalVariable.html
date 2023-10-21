@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Variable in JS</title>
+</head>
+<body>
+    <h1>Global Variable in JS</h1>
+    <script>
+        // Global variable in Js
+        // 1. declaring variable outside function
+        var value= 500;
+        document.write(value);
+        function a()
+        {
+            document.writeln(value);
+        }
+
+        // 2. using window object
+        function b()
+        {
+            window.data= 600;
+        }
+        function c()
+        {
+            document.writeln("variable declaration using window object : ")
+            document.writeln(window.data);                  ///accessing data
+        }
+
+        //3. variable declared outside the function is added in the window object
+        var key =800;
+        function d()
+        {
+            document.writeln(window.key);
+        }
+        
+    </script>
+    
+</body>
+</html>
