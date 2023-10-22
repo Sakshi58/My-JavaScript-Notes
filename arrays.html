@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in JS</title>
+  </head>
+  <body>
+    <h1>Arrays in JavaScript</h1>
+
+    <script>
+      var arr = ["app", "cam", 56, "ram", "rom", "cpu", "lap", null];
+
+      //Array methods
+      // length method
+      let l = arr.length;
+      console.log(l);
+
+      //pop() - deletes the last element
+      arr.pop();
+      console.log(arr);
+
+      //push() - inserts element at last
+      arr.push("sakshi");
+      console.log(arr);
+
+      //shift() - deletes the  first element
+      arr.shift();
+      console.log(arr);
+
+      //unshift()- inserts  element at first
+      arr.unshift("Singh");
+      console.log(arr);
+
+      //const newLen = console.log(arr.unshift("hiii"));          --returns the length
+
+      //sort() - sorts the array
+      console.log(arr.sort());
+
+      //toString() - converts to string
+      console.log(arr.toString());
+
+      //The splice() method adds new items to an array.
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.splice(2, 0, "Lemon", "Kiwi");
+      console.log(fruits);
+
+      /*The first parameter (2) defines the position where new elements should be added (spliced in).
+        The second parameter (0) defines how many elements should be removed.
+        The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.*/
+
+        //The splice() method returns an array with the deleted items:
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(2, 2, "Lemon", "Kiwi");
+        console.log(fruits1);
+
+        //splice() to Remove Elements
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(0, 1);
+        console.log(fruits2);
+        /*The first parameter (0) defines the position where new elements should be added (spliced in).
+        The second parameter (1) defines how many elements should be removed*/
+
+        //The slice() method slices out a piece of an array into a new array.
+        const fruits3 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        const citrus = fruits.slice(1);
+        console.log(fruits3);
+
+        <h4>The slice() method creates a new array.
+        The slice() method does not remove any elements from the source array.</h4>
+
+        //This example slices out a part of an array starting from array element 3 ("Apple"):
+        const fruits4 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        const citrus1= fruits.slice(3);
+    </script>
+  </body>
+</html>
