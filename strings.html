@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String in JS</title>
+</head>
+<body>
+    <h1>Strings in JavaScript</h1>
+
+    <script>
+        //creating string using string literal
+        var str = "this  is  a string literal";
+        var str1 = 'this  is also a  string literal';
+        document.writeln("</br>", str);
+        document.writeln("</br>", str1);
+
+        //using string object [using new keyword]
+        var string1= new String("hello people!!!");
+        document.writeln("</br>", string1, "</br>");
+
+        // string methods
+        //1. CharAt()
+        
+        var s= "This is Javascript tutorial";
+        document.writeln(s);
+        s.charAt(2);
+        console.log(s.charAt(2));
+
+        //2. concat()
+        console.log(s.concat(" by harry"));
+        document.writeln("</br>"," ",s.concat(" ",str, " ",  str1));
+
+        //3. indexOf()
+        console.log(s.indexOf("is"));           //returns the  index of first letter 
+
+        //4.lastIndexOf()
+        console.log(s.lastIndexOf("l"));
+
+        //5. slice(beginIndex, endIndex) - returns the character  from begin index to endindex-1
+        console.log(s.slice(5,9));
+
+        //6. split()
+        var str2="This is JavaTpoint website";  
+        document.write("</br>",str2.split(" ")); //splits the given string.  
+    </script>
+</body>
+</html>
