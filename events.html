@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <h1>Event Handling in JS</h1>
+    <div class="frs" style="border: 3px solid black; background-color: gray; height: min-content;">
+        <p id="par" onmouseover="over()" onmouseout="out()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veniam totam doloribus laboriosam, sit placeat facilis nemo. Sunt inventore accusamus iusto.
+        </br> 
+        Fuga quaerat eius distinctio ut officiis magni pariatur suscipit.</p>
+        <button id="clk" onclick="clicked()" onmouseenter="enter()" onmouseout="out()">Click me</button>
+        <br>
+        <button id="dte" onclick="date()">Show date</button>
+    </div>
+
+    <!--
+        DOM Events
+        1. onclick
+        2. onmouseenter
+        3. onmouseout
+        4. onmouseover
+        5. onload
+        6. onunload
+    -->
+
+                    <!--Event Listeners-->
+            <!--syntax of eventListeners
+                addEventListener(event, function);
+                event = HTML DOM events without "on" prefix
+                You can add events of different types to the same element
+            -->
+        <h5>The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.</h5>
+    <script>
+        function clicked()
+        {
+            const x = document.getElementById('clk').innerHTML = "Clicked ";
+        }
+        function enter()
+        {
+            const x= document.getElementById('clk').style.backgroundColor= 'red';
+
+        }
+        function out()
+        {
+            document.getElementById('clk').style.backgroundColor= 'white';
+            document.getElementsById('par').removeEventListener('mouseover')
+
+        }
+        function date()
+        {
+            const x = Date();
+            alert(x);
+        }
+        function over()
+        {
+            document.getElementsByTagName("p")[0].innerHTML= "HTML DOM Element getElementsByTagName";
+        }
+        
+
+        ///EVENT LISTENERS
+        document.getElementById('dte').addEventListener('click', function(){alert("Hello coder!!! You will make your parents proud")});
+    </script>
+</body>
+</html>

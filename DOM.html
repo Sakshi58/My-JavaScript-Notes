@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JS</title>
+</head>
+<body>
+    <h1>DOM : document Object model</h1>
+    <h4>Dynamically change the content and style of the web page</h4>
+    <p>Document Object Model (DOM) is a platform and language-neutral interface that allows </br>programs and scripts to dynamically access and update the content, structure, and style of a document."</p>
+
+
+    <button id="click" name="clk" onclick="print()">Click</button>
+
+    <!--print name-->
+    <form name="form1">  
+        Enter Name:<input type="text" name="name"/>  
+        <input type="button" onclick="printvalue()" value="print name"/>  
+    </form> 
+    <script>
+
+        ///DOM Manipulation
+        //1. getElementById()  
+        let elem  = document.getElementById('click');
+        console.log(elem);
+
+        function print()
+        {
+            alert("Don't you dare to click it ")
+        }
+
+        //print name funcntion
+        function printvalue(){  
+        var name=document.form1.name.value;  
+        alert("Welcome: "+name);  
+        }  
+
+        
+    </script>
+      
+          
+         
+</body>
+</html>
